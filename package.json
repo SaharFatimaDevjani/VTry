@@ -13,6 +13,8 @@
     "@storefront-ui/react": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-medium-image-zoom": "^5.2.14",
     "react-router-dom": "^7.6.0",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1"

@@ -15,40 +15,52 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
+
 import Navbar from './Components/Navbar';
-import Banner from './Components/Banner';
-import Categories from './Components/Categories';
-import JustForYou from './Components/JustForYou';
-import FlashSale from './Components/FlashSale';
-import PaymentSection from './Components/paymentmethods';
-import FooterFourth from './Components/FooterFourth';
-import FooterContent from './Components/FooterContent';
-import ProductDetail from './Components/ProductDetail';
-import CheckoutPage from './Components/pages/CheckoutPage';
+import HeroSection from './components/HeroSection';
+import BrandSlider from './components/BrandSlider';
+import ProductSection from './components/ProductSection';
+import AlwaysOnTrend from './components/AlwaysOnTrend';
+import WhyChooseUs from './components/WhyChooseUs';
+import Footer from './components/Footer';
+import Cart from './components/pages/Viewcart';
+
+import ContactSection from './components/pages/ContactSection'; // import your contact page component
+import AboutPage from './components/pages/About'; // if you have an about page
+import ProductDetail from "./components/pages/ProductDetail"; // import your product detail page
 
 export default function App() {
   return (
     <>
       <BrowserRouter>
         <Navbar />
+        {/* <Navbar /> */}
+        <HeroSection />
         <Routes>
-          <Route
-            path="/"
-            element={
-              <div className="w-full max-w-[1536px] mx-auto px-4 bg-gray-50">
-                <Banner />
-                <FlashSale />
-                <Categories />
-                <JustForYou />
-              </div>
-            }
-          />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/" element={
+            <>
+              <BrandSlider />
+              <ProductSection title="Trending Now" />
+              <ProductSection title="Best Selling" />
+              <AlwaysOnTrend />
+              <WhyChooseUs />
+            </>
+          } />
+          <Route path="/contact" element={<ContactSection />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/product/:productId" element={<ProductDetail />} />
+            <Route path="/cart" element={<Cart />} />
+          {/* Add other routes as needed */}
         </Routes>
-        <PaymentSection />
-        <FooterContent />
-        <FooterFourth />
+        <Footer />
+        {/* <HeroSection />
+        <BrandSlider />
+        <ProductSection title="Trending Now" />
+        <ProductSection title="Best Selling" />
+        <AlwaysOnTrend />
+        <WhyChooseUs />
+        <Footer /> */}
       </BrowserRouter>
     </>
   );
