@@ -1,34 +1,31 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { bracelet01, earrings04, earrings05 } from "../assets/images";
 
 const products = [
   {
     id: 10,
     name: "Product Name 10",
     price: "$1,700.00",
-    image:
-      "https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/bracelet-01-a-600x750.jpg",
+    image: bracelet01,
   },
   {
     id: 11,
     name: "Product Name 11",
     price: "$400.00",
-    image:
-      "https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/earrings-04-a-240x300.jpg",
+    image: earrings04,
   },
   {
     id: 12,
     name: "Product Name 12",
     price: "$350.00",
-    image:
-      "https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/earrings-05-a-240x300.jpg",
+    image: earrings05,
   },
   {
     id: 13,
     name: "Product Name 12",
     price: "$350.00",
-    image:
-      "https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/earrings-04-a-240x300.jpg",
+    image: earrings04,
   },
 ];
 

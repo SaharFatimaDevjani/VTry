@@ -1,11 +1,7 @@
 import React, { useState } from "react";
+import { pi1, pi2, pi3, pi4 } from "../../assets/images";
 
-const productImages = [
-  "https://img.drz.lazcdn.com/static/pk/p/2de5eb85da6450b04dfb960e73849f24.png_720x720q80.png_.webp",
-  "https://img.drz.lazcdn.com/static/pk/p/bfdb50e5a49ebbed3589d8ba43163871.png_720x720q80.png_.webp",
-  "https://img.drz.lazcdn.com/static/pk/p/d3f57052b165b92f17c8f15f416110b3.png_720x720q80.png_.webp",
-  "https://img.drz.lazcdn.com/static/pk/p/cfd0b12a548b1a19d8f7f67c00b6e2a3.png_720x720q80.png_.webp",
-];
+const productImages = [pi1, pi2, pi3, pi4];
 
 export default function ProductImages() {
   const [selectedImage, setSelectedImage] = useState(productImages[0]);

@@ -2,22 +2,23 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import { earrings01, earrings03, earrings05, earrings06, t1 } from '../../assets/images';
 
 const relatedProducts = [
   { id: 12, name: 'Product Name 12',
     price: 350,
-     img: 'https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/earrings-03-a-240x300.jpg' },
+     img: earrings03 },
   { id: 7, name: 'Product Name 7', price: 500,
-     img: 'https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/earrings-05-a-240x300.jpg' },
+     img: earrings05 },
   { id: 8, name: 'Product Name 8', price: 390, oldPrice: 450,
-     img: 'https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/earrings-01-a-240x300.jpg', sale: true },
+     img: earrings01, sale: true },
   { id: 11, name: 'Product Name 11', price: 400,
-     img: 'https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/earrings-06-a-240x300.jpg' },
+     img: earrings06 },
 ];
 const thumbnails = [
-    "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80",
-    "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80",
-    "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" 
+    t1,
+    t1,
+    t1 
  ];
 
 export default function ProductDetail() {

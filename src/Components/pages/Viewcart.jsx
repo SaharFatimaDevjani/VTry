@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {earrings03} from "../../assets/images"
 
 const initialCart = [
   {
@@ -6,8 +7,7 @@ const initialCart = [
     name: "Product Name 10",
     price: 1700,
     quantity: 1,
-    image:
-      "https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/earrings-03-a-240x300.jpg",
+    image: earrings03
   },
 ];
 

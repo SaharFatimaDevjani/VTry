@@ -1,13 +1,14 @@
 // components/CustomerReviews.jsx
 
 import React from "react";
+import { c5be01b235164d79918f01d3979b87a5 } from "../../assets/images";
 
 const reviews = [
   {
     user: "Ali Khan",
     rating: 5,
     text: "Very good product. Works perfectly with my GoPro!",
-    image: "https://static-01.daraz.pk/p/c5be01b235164d79918f01d3979b87a5.jpg",
+    image: c5be01b235164d79918f01d3979b87a5,
     verified: true,
   },
   {

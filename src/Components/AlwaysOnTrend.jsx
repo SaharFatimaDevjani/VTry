@@ -1,7 +1,5 @@
 import React from 'react';
-
-const modelImg = "https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/bg-01.jpg";
-const ringImg = "https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/bg-02.jpg";
+import {ringImg, modelImg} from '../assets/images'
 
 export default function AlwaysOnTrend() {
   return (

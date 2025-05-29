@@ -1,5 +1,6 @@
 import React from "react";
 import "../../assets/AboutPage.css";
+import { DrawingJewelry, Founder } from "../../assets/images";
 
 const AboutPage = () => (
   <div className="about-page">
@@ -24,7 +25,7 @@ const AboutPage = () => (
       </div>
       <div className="founder-image">
         <img
-          src="https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg"
+          src={Founder}
           alt="Founder"
         />
       </div>
@@ -34,7 +35,7 @@ const AboutPage = () => (
     <section className="started-section">
       <div className="started-image">
         <img
-          src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg"
+          src={DrawingJewelry}
           alt="Drawing Jewelry"
         />
       </div>
