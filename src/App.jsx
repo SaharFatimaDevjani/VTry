@@ -17,18 +17,19 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 
-import Navbar from './Components/Navbar';
-import HeroSection from './components/HeroSection';
-import BrandSlider from './components/BrandSlider';
-import ProductSection from './components/ProductSection';
-import AlwaysOnTrend from './components/AlwaysOnTrend';
-import WhyChooseUs from './components/WhyChooseUs';
-import Footer from './components/Footer';
-import Cart from './components/pages/Viewcart';
+import Navbar from './Components/Frontend/Navbar';
+import HeroSection from './components/Frontend/HeroSection';
+import BrandSlider from './components/Frontend/BrandSlider';
+import ProductSection from './components/Frontend/ProductSection';
+import AlwaysOnTrend from './components/Frontend/AlwaysOnTrend';
+import WhyChooseUs from './components/Frontend/WhyChooseUs';
+import Footer from './components/Frontend/Footer';
 
-import ContactSection from './components/pages/ContactSection'; // import your contact page component
-import AboutPage from './components/pages/About'; // if you have an about page
-import ProductDetail from "./components/pages/ProductDetail"; // import your product detail page
+
+import Cart from './pages/Frontend/Viewcart';
+import ContactSection from './pages/Frontend/ContactSection'; // import your contact page component
+import AboutPage from './pages/Frontend/About'; // if you have an about page
+import ProductDetail from "./pages/Frontend/ProductDetail"; // import your product detail page
 
 export default function App() {
   return (
