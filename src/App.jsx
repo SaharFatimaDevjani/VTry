@@ -1,23 +1,16 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
+import router from './AppRoutes/MainAppRoutes';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Navbar from './components/Frontend/Navbar';
-import HeroSection from './components/Frontend/HeroSection';
-import Frontend from '././AppRoutes/Frontend'; // Import Frontend
-import Footer from '././components/Frontend/Footer';
+import Frontend from '././AppRoutes/Frontend'; 
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <HeroSection />
-      <Frontend /> {/* Call the Frontend component here */}
-      <Footer />
-    </BrowserRouter>
     
+    <RouterProvider router={router} />
     
   );
 }
