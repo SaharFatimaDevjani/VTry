@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Frontend from '././AppRoutes/Frontend'; 
+import admin from '././AppRoutes/Admin'
 
 export default function App() {
   return (
