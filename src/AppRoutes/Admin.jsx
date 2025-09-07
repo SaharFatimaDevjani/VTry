@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/dashboard" element={<DashboardLayout />}>
-          
+    
           <Route path="products" element={<Products />} />
           <Route path="users" element={<Users />} />
          
