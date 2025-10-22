@@ -1,27 +1,25 @@
+import React from 'react'
+import DashboardLayout from '../Layout/Admin/Dashboard'
 
-// src/App.js
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DashboardLayout from "../Layout/Admin/Dashboard";
+import Products from '../pages/Admin/product'
+import Users from '../pages/Admin/users'
 
-import Products from "../pages/Admin/product";
-import Users from "../pages/Admin/users";
-
-
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/dashboard" element={<DashboardLayout />}>
-    
-          <Route path="products" element={<Products />} />
-          <Route path="users" element={<Users />} />
-         
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+const AdminRoute = {
+    element: <DashboardLayout />,
+    children: [
+        {
+            path: "/admin",
+            element: <Products />
+        },
+        {
+            path: "/admin/products",
+            element: <Products />
+        },
+        {
+            path: "/admin/users",
+            element: <Users />
+        }
+    ]
 }
 
-export default App;
-
+export default AdminRoute
