@@ -40,6 +40,7 @@ import AdminLayout from "./Layout/Admin";
 
 // Auth components
 import Login from "./components/auth/Login";
+import Signup from "./components/auth/Signup";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { AuthProvider } from "./context/AuthContext";
 
@@ -73,6 +74,7 @@ function AppContent() {
           
           {/* Auth Routes */}
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
           
           {/* Admin Routes - Protected */}
           <Route 
