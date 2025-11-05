@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import { earrings01, earrings03, earrings05, earrings06, t1 } from '../../assets/images';
@@ -22,6 +22,7 @@ const thumbnails = [
  ];
 
 export default function ProductDetail() {
+  const { productId } = useParams();
   const [quantity, setQuantity] = useState(1);
   const [selectedImg, setSelectedImg] = useState(thumbnails[0]);
 
