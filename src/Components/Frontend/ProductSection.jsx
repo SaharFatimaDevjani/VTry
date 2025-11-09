@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { bracelet01, earrings04, earrings05 } from "../assets/images";
+import { bracelet01, earrings04, earrings05 } from "../../assets/images";
 
 const products = [
   {

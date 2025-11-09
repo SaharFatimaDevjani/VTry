@@ -1,5 +1,5 @@
 import React from 'react';
-import {ringImg, modelImg} from '../assets/images'
+import {ringImg, modelImg} from '../../assets/images'
 
 export default function AlwaysOnTrend() {
   return (
