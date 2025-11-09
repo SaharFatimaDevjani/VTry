@@ -1,11 +1,9 @@
 import React from "react";
 
-import Maps from '../Maps';
 
-export default function ContactSection() {
+export default function MessageUs() {
   return (
-    <>
-      <section className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-10 py-16 px-8">
+    <section className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-10 py-16 px-8">
         <div className="flex-1 max-w-md">
           <h2 className="text-2xl font-serif mb-4">MESSAGE US</h2>
           <p className="text-gray-600 mb-8 text-sm">
@@ -67,9 +65,5 @@ export default function ContactSection() {
           </button>
         </form>
       </section>
-
-      <Maps />
-
-    </>
   );
 }

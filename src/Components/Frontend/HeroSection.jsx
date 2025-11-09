@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 const heroImg = "https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/hero.jpg"; // Replace with your stool image URL
 
 export default function HeroSection() {
@@ -20,3 +20,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+

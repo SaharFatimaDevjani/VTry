@@ -1,13 +1,23 @@
 import React from 'react'
-import AdminLayout from '../Layout/Admin/index' 
+import DashboardLayout from '../Layout/Admin/Dashboard'
+
+import Products from '../pages/Admin/product'
+import Users from '../pages/Admin/users'
 
 const AdminRoute = {
-    element:<AdminLayout/>,
-    children:[
-        // Add all routes here
+    element: <DashboardLayout />,
+    children: [
         {
-            path:"/admin",
-            element:<h1>Admin</h1>
+            path: "/admin",
+            element: <Products />
+        },
+        {
+            path: "/admin/products",
+            element: <Products />
+        },
+        {
+            path: "/admin/users",
+            element: <Users />
         }
     ]
 }

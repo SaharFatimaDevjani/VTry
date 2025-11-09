@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {earrings03} from "../../assets/images"
 
+// Initial Cart data
 const initialCart = [
   {
     id: 10,
@@ -11,19 +12,19 @@ const initialCart = [
   },
 ];
 
-export default function Cart() {
+const Cart = () => {
   const [cartItems, setCartItems] = useState(initialCart);
 
+  // Increment Quantity of a Product
   const incrementQuantity = (id) => {
     setCartItems((items) =>
       items.map((item) =>
-        item.id === id
-          ? { ...item, quantity: item.quantity + 1 }
-          : item
+        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
       )
     );
   };
 
+  // Decrement Quantity of a Product
   const decrementQuantity = (id) => {
     setCartItems((items) =>
       items.map((item) =>
@@ -34,10 +35,12 @@ export default function Cart() {
     );
   };
 
+  // Remove an item from Cart
   const removeItem = (id) => {
     setCartItems((items) => items.filter((item) => item.id !== id));
   };
 
+  // Calculate the subtotal of all products in the cart
   const calculateSubtotal = () => {
     return cartItems.reduce(
       (acc, item) => acc + item.price * item.quantity,
@@ -154,4 +157,6 @@ export default function Cart() {
       </div>
     </div>
   );
-}
+};
+
+export default Cart;
