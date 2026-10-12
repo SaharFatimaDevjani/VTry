@@ -1,8 +1,9 @@
 // src/components/Sidebar.js
 import React from "react";
 import { navItems } from "../../config/navitem"; // aapka navItems array
-import { Link } from "react-router-dom";
-import { Home, Users, Settings, User, XSquare, ChartPie, Plug, X } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "@/context/AuthContext";
+import { Home, Users, Settings, User, XSquare, ChartPie, Plug, X, LogOut } from "lucide-react";
 
 const iconMap = {
   "chart-pie": ChartPie,
@@ -14,6 +15,14 @@ const iconMap = {
 };
 
 function Sidebar({ open = false, onClose = () => {} }) {
+  const { logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login", { replace: true });
+  };
+
   return (
     <>
     {/* Backdrop on mobile */}
@@ -46,6 +55,13 @@ function Sidebar({ open = false, onClose = () => {} }) {
             </Link>
           );
         })}
+        <button
+          onClick={handleLogout}
+          className="w-full flex items-center gap-2 p-2 rounded-lg hover:bg-gray-700"
+        >
+          <LogOut className="w-5 h-5" />
+          <span>Log out</span>
+        </button>
       </nav>
     </aside>
     </>
