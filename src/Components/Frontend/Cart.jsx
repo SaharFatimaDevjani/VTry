@@ -49,25 +49,25 @@ const Cart = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white font-serif font-light flex flex-col items-center pt-8">
+    <div className="min-h-screen bg-white font-serif font-light flex flex-col items-center pt-8 px-4">
       <h2 className="text-2xl tracking-wide mb-10 font-serif font-normal uppercase text-[#222]">Cart</h2>
 
       {/* Progress Steps */}
-      <div className="mb-12 text-xs flex gap-4 font-semibold text-gray-400 items-center">
+      <div className="mb-8 md:mb-12 text-xs flex flex-wrap justify-center gap-2 md:gap-4 font-semibold text-gray-400 items-center">
         <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#a37f58] text-white">1</span>
         <span className="text-[#a37f58] font-semibold tracking-wide">SHOPPING CART</span>
         <span className="text-lg">&gt;</span>
         <span className="flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 text-gray-400">2</span>
-        <span className="text-gray-400 tracking-wide">CHECKOUT DETAILS</span>
+        <span className="hidden sm:inline text-gray-400 tracking-wide">CHECKOUT DETAILS</span>
         <span className="text-lg">&gt;</span>
         <span className="flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 text-gray-400">3</span>
-        <span className="text-gray-400 tracking-wide">ORDER COMPLETE</span>
+        <span className="hidden sm:inline text-gray-400 tracking-wide">ORDER COMPLETE</span>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-10 w-full max-w-6xl">
         {/* Cart Table */}
         <div className="flex-1">
-          <div className="overflow-x-auto border border-[#f0e9e0] rounded-md bg-white shadow-sm">
+          <div className="hidden md:block overflow-x-auto border border-[#f0e9e0] rounded-md bg-white shadow-sm">
             <table className="w-full border-collapse text-sm">
               <thead className="bg-[#f9f3eb] font-semibold text-xs text-gray-700">
                 <tr>
@@ -123,10 +123,42 @@ const Cart = () => {
               </tbody>
             </table>
           </div>
+
+          {/* Mobile cart items */}
+          <div className="md:hidden space-y-4">
+            {cartItems.map(({ id, name, price, quantity, image }) => (
+              <div key={id} className="flex gap-4 border border-[#f0e9e0] rounded-md p-4 shadow-sm">
+                <div className="w-20 h-20 flex-shrink-0 border border-dashed border-gray-300 flex items-center justify-center bg-[#faf7f2]">
+                  <img src={image} alt={name} className="max-w-full max-h-full object-contain" />
+                </div>
+                <div className="flex-1 min-w-0 space-y-2">
+                  <div className="flex justify-between items-start gap-2">
+                    <span className="font-serif text-base text-[#222]">{name}</span>
+                    <button
+                      onClick={() => removeItem(id)}
+                      className="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 text-gray-400 hover:text-gray-600 hover:border-gray-600"
+                      aria-label="Remove item"
+                    >
+                      &#x2715;
+                    </button>
+                  </div>
+                  <p className="text-sm text-gray-600 font-serif">${price.toLocaleString(undefined, {minimumFractionDigits: 2})}</p>
+                  <div className="flex justify-between items-center">
+                    <div className="inline-flex border border-gray-300 rounded-md overflow-hidden bg-white">
+                      <button onClick={() => decrementQuantity(id)} className="w-8 h-8 flex items-center justify-center text-sm hover:bg-gray-100">-</button>
+                      <span className="w-10 h-8 flex items-center justify-center text-sm font-serif">{quantity}</span>
+                      <button onClick={() => incrementQuantity(id)} className="w-8 h-8 flex items-center justify-center text-sm hover:bg-gray-100">+</button>
+                    </div>
+                    <span className="text-[#222] font-serif">${(price * quantity).toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Cart Totals */}
-        <div className="w-full mb-8 max-w-xs self-start border border-[#f0e9e0] rounded-md p-6 bg-[#f9f3eb] font-serif font-semibold uppercase text-xs tracking-wide shadow-sm">
+        <div className="w-full mb-8 lg:max-w-xs self-start border border-[#f0e9e0] rounded-md p-6 bg-[#f9f3eb] font-serif font-semibold uppercase text-xs tracking-wide shadow-sm">
           <h3 className="mb-4 text-base font-serif font-semibold text-[#222]">Cart Totals</h3>
           <div className="flex justify-between border-b border-[#e4dbd1] py-2 font-normal">
             <span className="font-normal normal-case text-[#222]">Subtotal</span>

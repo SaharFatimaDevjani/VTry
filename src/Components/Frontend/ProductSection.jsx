@@ -37,10 +37,10 @@ export default function ProductSection({ title }) {
   };
 
   return (
-    <section className="py-10 text-center">
+    <section className="py-10 px-4 text-center">
       <h2 className="text-2xl font-serif mb-2">{title}</h2>
       <div className="mx-auto w-16 border-b-2 border-black mb-6"></div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
         {products.map((product) => (
           <div
             key={product.id}

@@ -47,10 +47,10 @@ const HowAllStartedSection = () => (
     //   </div>
     // </section> 
 
-    <section className="flex flex-col md:flex-row px-8 py-16 max-w-7xl mx-auto gap-16">
+    <section className="flex flex-col md:flex-row px-4 md:px-8 py-10 md:py-16 max-w-7xl mx-auto gap-6 md:gap-16">
         <div className="md:w-1/2">
           <h6 className="text-sm text-gray-500 uppercase mb-2">About us</h6>
-          <h2 className="text-4xl font-serif font-semibold mb-4">How it all started</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">How it all started</h2>
         </div>
         <div className="md:w-1/2 space-y-6 text-gray-700">
           <p className="text-base">

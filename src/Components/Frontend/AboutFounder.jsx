@@ -35,10 +35,10 @@ const AboutFounder = () => (
 
   <div className="bg-white">
       {/* Section 1 */}
-      <section className="flex flex-col md:flex-row items-center justify-between px-8 py-16 max-w-7xl mx-auto gap-8">
+      <section className="flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-10 md:py-16 max-w-7xl mx-auto gap-8">
         <div className="md:w-1/2">
           <h6 className="text-sm text-gray-500 uppercase mb-2">Mattis velit eget</h6>
-          <h2 className="text-4xl font-serif font-semibold mb-4">About the founder</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">About the founder</h2>
           <h5 className="text-lg text-gray-600 mb-6">
             Fusce egestas mi urna, id pulvinar ipsum dictum eget. Mauris in dolor velit.
           </h5>

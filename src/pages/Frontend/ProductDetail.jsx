@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import ProductDetails from '../../components/Frontend/ProductDetails';
-import DescriptionAndReviews from '../../components/Frontend/DescriptionAndReviews';
-import RelatedProducts from '../../components/Frontend/RelatedProducts';
+import ProductDetails from '../../Components/Frontend/ProductDetails';
+import DescriptionAndReviews from '../../Components/Frontend/DescriptionAndReviews';
+import RelatedProducts from '../../Components/Frontend/RelatedProducts';
 
 const relatedProducts = [
   { id: 12, name: 'Product Name 12',
@@ -34,7 +34,7 @@ export default function ProductDetail() {
   const decreaseQty = () => setQuantity((qty) => (qty > 1 ? qty - 1 : 1));
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10">
+    <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-10">
       <ProductDetails
         product={product}
         thumbnails={thumbnails}

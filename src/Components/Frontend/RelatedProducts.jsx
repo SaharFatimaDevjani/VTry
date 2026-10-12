@@ -2,9 +2,9 @@ import React from 'react';
 
 const RelatedProducts = ({ relatedProducts }) => {
   return (
-    <section className="mt-20">
+    <section className="mt-12 md:mt-20">
       <h3 className="text-2xl font-serif mb-6">Related Products</h3>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-7xl">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 max-w-7xl">
         {relatedProducts.map((product) => (
           <div key={product.id} className="space-y-2 cursor-pointer">
             <div className="relative">

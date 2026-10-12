@@ -3,7 +3,7 @@ import React from "react";
 
 export default function MessageUs() {
   return (
-    <section className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-10 py-16 px-8">
+    <section className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-10 py-10 md:py-16 px-4 md:px-8">
         <div className="flex-1 max-w-md">
           <h2 className="text-2xl font-serif mb-4">MESSAGE US</h2>
           <p className="text-gray-600 mb-8 text-sm">
@@ -31,17 +31,17 @@ export default function MessageUs() {
           </ul>
         </div>
         {/* Form section */}
-        <form className="bg-[#faf0e9] p-8 rounded-md shadow-sm w-full max-w-md flex flex-col gap-5">
-          <div className="flex gap-4">
+        <form className="bg-[#faf0e9] p-5 md:p-8 rounded-md shadow-sm w-full md:max-w-md flex flex-col gap-5">
+          <div className="flex flex-col sm:flex-row gap-4">
             <input
               type="text"
               placeholder="First name"
-              className="w-1/2 flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400"
+              className="w-full sm:w-1/2 flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400"
             />
             <input
               type="text"
               placeholder="Last Name"
-              className="w-1/2 flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400"
+              className="w-full sm:w-1/2 flex-1 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400"
             />
           </div>
 

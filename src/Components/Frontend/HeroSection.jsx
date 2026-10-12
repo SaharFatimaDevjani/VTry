@@ -4,12 +4,12 @@ const heroImg = "https://websitedemos.net/blingg-jewelry-store-04/wp-content/upl
 export default function HeroSection() {
   return (
     <section
-      className="bg-cover bg-center h-[90vh] flex items-center justify-start"
+      className="bg-cover bg-center min-h-[60vh] md:h-[90vh] flex items-center justify-start"
       style={{ backgroundImage: `url(${heroImg})` }}
     >
-      <div className="bg-opacity-80 p-8 ml-16 max-w-xl rounded shadow">
+      <div className="bg-opacity-80 p-6 mx-4 md:p-8 md:ml-16 max-w-xl rounded shadow">
         <p className="uppercase text-xs mb-2 tracking-widest">New collection</p>
-        <h1 className="text-5xl font-serif mb-4 leading-tight">The new ring <br /> sensation</h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-4 leading-tight">The new ring <br /> sensation</h1>
         <p className="text-sm mb-6 text-gray-700">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
         </p>

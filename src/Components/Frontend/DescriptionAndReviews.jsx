@@ -2,7 +2,7 @@ import React from 'react';
 
 const DescriptionAndReviews = ({ product }) => {
   return (
-    <div className="mt-16 space-y-8">
+    <div className="mt-10 md:mt-16 space-y-8">
       <div>
         <h2 className="font-serif font-semibold text-lg mb-2">Description</h2>
         <p className="text-gray-700 leading-relaxed max-w-4xl">{product.description}</p>
@@ -32,7 +32,7 @@ const DescriptionAndReviews = ({ product }) => {
               <textarea className="w-full border border-gray-300 rounded p-2 mt-1" rows="4" required></textarea>
             </label>
 
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <label className="flex-1 block">
                 <span className="font-semibold text-sm">Name *</span>
                 <input type="text" className="w-full border border-gray-300 rounded p-2 mt-1" required />

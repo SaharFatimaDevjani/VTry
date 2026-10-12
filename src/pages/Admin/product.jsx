@@ -96,8 +96,8 @@ function Products() {
   };
 
   return (
-    <div className="p-8 bg-gray-100 min-h-screen">
-      <h2 className="text-3xl font-bold text-center mb-6">Products</h2>
+    <div className="p-0 md:p-8 bg-gray-100 min-h-screen">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">Products</h2>
 
       {/* Add Product Button */}
       <div className="flex justify-center mb-6">
@@ -110,7 +110,7 @@ function Products() {
       </div>
 
       {/* Product List */}
-      <div className="bg-white shadow-lg rounded-2xl p-6">
+      <div className="bg-white shadow-lg rounded-2xl p-4 md:p-6">
         <h3 className="text-xl font-semibold mb-4 text-gray-700">
           Product List
         </h3>
@@ -120,7 +120,7 @@ function Products() {
             {products.map((product) => (
               <div
                 key={product.id}
-                className="flex items-center justify-between border p-4 rounded-lg shadow-sm hover:shadow-md transition"
+                className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border p-4 rounded-lg shadow-sm hover:shadow-md transition"
               >
                 <div className="flex items-center space-x-4">
                   <img
@@ -135,7 +135,7 @@ function Products() {
                     <p className="text-gray-600">Rs. {product.price}</p>
                   </div>
                 </div>
-                <div className="space-x-2">
+                <div className="flex gap-2">
                   <button
                     onClick={() => handleEdit(product)}
                     className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-lg"
@@ -159,8 +159,8 @@ function Products() {
 
       {/* Modal */}
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-2xl shadow-lg w-full max-w-md p-6 relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
+          <div className="bg-white rounded-2xl shadow-lg w-full max-w-md p-6 relative max-h-full overflow-y-auto">
             <button
               onClick={closeModal}
               className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
