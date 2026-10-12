@@ -18,7 +18,7 @@ export default function BrandSlider() {
               key={i}
               src={logo}
               alt={`brand-${i}`}
-              className="h-32 inline-block object-contain"
+              className="h-16 md:h-32 inline-block object-contain"
               loading="lazy"
             />
           ))}

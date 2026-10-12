@@ -6,12 +6,12 @@ const heroImg = "https://websitedemos.net/blingg-jewelry-store-04/wp-content/upl
 export default function HeroSection2(props) {
   return (
     <section
-      className="bg-cover bg-center h-[90vh] flex items-center justify-center"
+      className="bg-cover bg-center h-[40vh] md:h-[90vh] flex items-center justify-center"
       style={{ backgroundImage: `url(${heroImg})` }}
     >
-      <div className="text-center text-white">
+      <div className="text-center text-white px-4">
         <h6 className="text-sm uppercase mb-2">{props.subHeading}</h6>
-        <h1 className="text-4xl font-bold">{props.mainHeading}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold">{props.mainHeading}</h1>
       </div>
     </section>
   );

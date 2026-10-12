@@ -3,13 +3,13 @@ import {ringImg, modelImg} from '../../assets/images'
 
 export default function AlwaysOnTrend() {
   return (
-    <section className="h-[780px] max-w-7xl mx-auto py-16 relative bg-white justify-center">
+    <section className="max-w-7xl mx-auto px-4 py-12 md:px-0 md:py-16 md:h-[780px] relative bg-white justify-center">
       {/* Grid Container */}
       <div className="grid md:grid-cols-3 items-center gap-10">
         {/* Left Text */}
-        <div className="max-w-xs space-y-6 md:mt-24">
+        <div className="md:max-w-xs space-y-6 md:mt-24 relative z-[3]">
           <p className="text-xs uppercase text-gray-400 tracking-widest font-sans">Unique pieces</p>
-          <h2 className="font-serif text-4xl leading-tight font-semibold whitespace-pre-line" style={{lineHeight: '1.2'}}>
+          <h2 className="font-serif text-3xl md:text-4xl leading-tight font-semibold md:whitespace-pre-line" style={{lineHeight: '1.2'}}>
             {'BE\nALWAYS\nON\nTREND'}
           </h2>
           <p className="text-gray-700 text-sm max-w-[280px]">
@@ -21,7 +21,7 @@ export default function AlwaysOnTrend() {
         </div>
 
         {/* Center Ring Image */}
-        <div className="flex justify-center relative">
+        <div className="hidden md:flex justify-center relative">
           <img 
             src={ringImg} 
             alt="Rings" 
@@ -30,11 +30,17 @@ export default function AlwaysOnTrend() {
         </div>
 
         {/* Empty div for grid spacing */}
-        <div></div>
+        <div className="hidden md:block"></div>
+      </div>
+
+      {/* Mobile images - stacked */}
+      <div className="md:hidden mt-10 grid grid-cols-2 gap-4">
+        <img src={modelImg} alt="Model" className="w-full h-64 object-cover rounded-md shadow-md" />
+        <img src={ringImg} alt="Rings" className="w-full h-64 object-cover rounded-md shadow-md" />
       </div>
 
       {/* Model Image - Positioned absolutely to break out of grid */}
-      <div className="absolute right-0 top-0">
+      <div className="hidden md:block absolute right-0 top-0">
         <img 
           src={modelImg} 
           alt="Model" 

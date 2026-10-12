@@ -10,7 +10,7 @@ const benefits = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 text-center bg-white">
+    <section className="py-12 md:py-16 px-4 text-center bg-white">
       <p className="text-sm uppercase mb-2">Best in business</p>
       <h2 className="text-2xl font-serif mb-4">Why choose us</h2>
       <p className="max-w-2xl mx-auto text-sm mb-10 text-gray-600">Cras malesuada dolor sit amet est egestas ullamcorper.</p>
